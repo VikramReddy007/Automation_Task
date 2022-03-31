@@ -3,6 +3,7 @@ package pages;
 import Utils.WebUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class BasePage {
     public static WebDriver driver;
@@ -12,14 +13,12 @@ public class BasePage {
     }
 
     public void beginPage(){
-        driver = new ChromeDriver();
-    }
-
-    public void openReactHomePage(){
-        driver.get("https://react-redux-grid.herokuapp.com/");
-        WebUtils.waitForPageLoad();
-        System.out.println("Page title ->"+driver.getTitle());
-        System.out.println("Waited until page is loaded!");
+        if(System.getProperty("os.name").equalsIgnoreCase("linux")) {
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("headless");
+            driver = new ChromeDriver(options);
+        }
+        else driver = new ChromeDriver();
     }
 
     public void openReactComplex(){

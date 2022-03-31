@@ -21,6 +21,7 @@ public class ReactComplex extends BasePage{
                 break;
             }
         }
+        WebUtils.waitForSeconds(3);
     }
 
     public void findAddress(){
@@ -35,6 +36,7 @@ public class ReactComplex extends BasePage{
                 break;
             }
         }
+        WebUtils.waitForSeconds(3);
     }
 
     public void findPhoneNum(){
@@ -49,6 +51,7 @@ public class ReactComplex extends BasePage{
                 break;
             }
         }
+        WebUtils.waitForSeconds(3);
     }
 
 }
