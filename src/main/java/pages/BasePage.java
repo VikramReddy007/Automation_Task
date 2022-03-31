@@ -8,7 +8,10 @@ public class BasePage {
     public static WebDriver driver;
 
     public BasePage(){
-        System.setProperty("webdriver.chrome.driver", "D:/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/main/java/Driver/chromedriver.exe");
+    }
+
+    public void beginPage(){
         driver = new ChromeDriver();
     }
 
@@ -17,6 +20,20 @@ public class BasePage {
         WebUtils.waitForPageLoad();
         System.out.println("Page title ->"+driver.getTitle());
         System.out.println("Waited until page is loaded!");
+    }
+
+    public void openReactComplex(){
+        beginPage();
+        driver.get(WebUtils.getPropertyFromParameters("react.complex.url"));
+        WebUtils.waitForPageLoad();
+        driver.manage().window().maximize();
+    }
+
+    public void openReactTree(){
+        beginPage();
+        driver.get(WebUtils.getPropertyFromParameters("react.tree.url"));
+        WebUtils.waitForPageLoad();
+        driver.manage().window().maximize();
     }
 
     public void closeBrowserSession(){
