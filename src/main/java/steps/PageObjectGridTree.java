@@ -16,21 +16,21 @@ public class PageObjectGridTree {
         reactTree = new ReactTree();
     }
 
-    @Test(testName = "ReactTreeCase1")
+    @Test(testName = "ReactTreeCase1: Fetch Email id from table")
     public void testCaseOneReactTree(){
         reactTree.openReactTreePage();
         reactTree.findEmailID();
         basePage.closeBrowserSession();
     }
 
-    @Test(testName = "ReactTreeCase2")
+    @Test(testName = "ReactTreeCase2: Fetch Address from table")
     public void testCaseTwoReactTree(){
         reactTree.openReactTreePage();
         reactTree.findAddress();
         basePage.closeBrowserSession();
     }
 
-    @Test(testName = "ReactTreeCase3")
+    @Test(testName = "ReactTreeCase3: Fetch Phone number from table")
     public void testCaseThreeReactTree(){
         reactTree.openReactTreePage();
         reactTree.findPhoneNum();
