@@ -52,8 +52,9 @@ public class WebUtils extends BasePage {
             WebUtils.waitForSeconds(0.3);
             js.executeScript("arguments[0].setAttribute('style', 'background: " + backgroundAttribute + "; border: " + borderAttribute + ";');", ele);
             WebUtils.waitForSeconds(0.3);
-            
-            WebUtils.waitForSeconds(3);
+            js.executeScript("arguments[0].setAttribute('style', 'background: " + backgroundAttribute + "; border: " + borderAttribute + ";');", ele);
+            WebUtils.waitForSeconds(0.3);
+            WebUtils.waitForSeconds(2);
     }
 
     public static void waitForSeconds(double secondCount){

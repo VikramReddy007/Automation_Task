@@ -13,21 +13,21 @@ public class PageObjectGridComplex {
         reactComplex = new ReactComplex();
     }
 
-    @Test(testName = "ReactComplexCase1: Fetch Email id from table")
+    @Test(testName = "ReactComplexCase1: Fetch Email id from table", groups = "testTemp")
     public void testCaseOneReactComplex(){
         reactComplex.openReactComplexPage();
         reactComplex.findEmailID();
         basePage.closeBrowserSession();
     }
 
-    @Test(testName = "ReactComplexCase2: Fetch Address from table")
+    @Test(testName = "ReactComplexCase2: Fetch Address from table", groups = "testTemp")
     public void testCaseTwoReactComplex(){
         reactComplex.openReactComplexPage();
         reactComplex.findAddress();
         basePage.closeBrowserSession();
     }
 
-    @Test(testName = "ReactComplexCase3: Fetch Phone num from table")
+    @Test(testName = "ReactComplexCase3: Fetch Phone num from table", groups = "testTemp")
     public void testCaseThreeReactComplex(){
         reactComplex.openReactComplexPage();
         reactComplex.findPhoneNum();
